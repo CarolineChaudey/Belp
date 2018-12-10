@@ -8,7 +8,7 @@
 
 import Foundation
 
-let translater : [Character:[MorseSymbol]] = [
+let letterTranslater : [Character:[MorseSymbol]] = [
     "A": [.dot, .dash],
     "B": [.dash, .dot, .dot, .dot],
     "C": [.dash, .dot, .dash, .dot],

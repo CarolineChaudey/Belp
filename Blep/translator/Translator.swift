@@ -17,17 +17,42 @@ class Translator {
             throw TranslationException.notAlphanumeric
         }
         // put all letters in uppercase
-        var upperCasedText = text.uppercased()
+        let upperCasedText = text.uppercased()
         // for each word
-        // for each letter
-        // for each symbol of a letter
+        codedWord = translateWord(word: upperCasedText)
         return codedWord
     }
     
-    /*private func translateWord(word: String) -> [MorseSymbol] {
+    private func translateWord(word: String) -> [MorseSymbol] {
         var codedWord : [MorseSymbol] = []
+
+        word.forEach { letter in
+            if var codedLetter = letterTranslater[letter] {
+                codedLetter = addPartSeparators(morseLetter: codedLetter)
+                codedWord += codedLetter
+                codedWord.append(MorseSymbol.letterSeparator)
+            } else {
+                print("Problem with letter \(letter)")
+            }
+        }
+        // remove the last letterSeparator, since it is the end of the word
+        codedWord.removeLast()
+
         return codedWord
-    }*/
+    }
+    
+    private func addPartSeparators(morseLetter: [MorseSymbol]) -> [MorseSymbol] {
+        var codedLetter : [MorseSymbol] = []
+        
+        morseLetter.forEach { symbol in
+            codedLetter.append(symbol)
+            codedLetter.append(MorseSymbol.partSeparator)
+        }
+        // remove the last partSeparator, since it is the end of the letter
+        codedLetter.removeLast()
+        
+        return codedLetter
+    }
 }
 
 extension String {

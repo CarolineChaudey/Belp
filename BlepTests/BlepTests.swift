@@ -19,7 +19,7 @@ class BlepTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testTranslatorWantsAlphanumerics() {
+    /*func testTranslatorWantsAlphanumerics() {
         let translator = Translator()
         XCTAssertThrowsError(try translator.translate(text: "")) { error in
             XCTAssertEqual(error as! TranslationException, TranslationException.notAlphanumeric)
@@ -32,6 +32,12 @@ class BlepTests: XCTestCase {
         }
         XCTAssertNoThrow(try translator.translate(text: "Hello world"))
         XCTAssertNoThrow(try translator.translate(text: "1 2 3 go"))
+    }*/
+    
+    func testTranslator() {
+        let translator = Translator()
+        let res = translator.translate(text: "sos")
+        print(res)
     }
 
 }
