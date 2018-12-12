@@ -13,7 +13,15 @@ enum MorseSymbol : String {
     case dash = "-"
     case letterSeparator = "|"
     case wordSeparator = " "
-    case partSeparator // between a letter elements
+    case partSeparator = "" // between a letter elements
+}
+
+func morseAsString(morseCode: [MorseSymbol]) -> String {
+    var strCode = ""
+    morseCode.forEach { symbol in
+        strCode += symbol.rawValue
+    }
+    return strCode
 }
 
 func duration(symbol: MorseSymbol) -> Int {
