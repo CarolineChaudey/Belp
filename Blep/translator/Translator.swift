@@ -11,7 +11,7 @@ import Foundation
 class Translator {
 
     public func translate(text: String) throws -> [MorseSymbol] {
-        var codedWord : [MorseSymbol] = []
+        var codedSentence : [MorseSymbol] = []
         // verify it is alphanumeric
         guard text.isAlphanumeric else {
             throw TranslationException.notAlphanumeric
@@ -19,8 +19,15 @@ class Translator {
         // put all letters in uppercase
         let upperCasedText = text.uppercased()
         // for each word
-        codedWord = translateWord(word: upperCasedText)
-        return codedWord
+        let words = upperCasedText.split(separator: " ")
+        words.forEach { word in
+            let codedWord = translateWord(word: String(word))
+            codedSentence += codedWord
+            codedSentence.append(MorseSymbol.wordSeparator)
+        }
+        // remove last word separator
+        codedSentence.removeLast()
+        return codedSentence
     }
     
     private func translateWord(word: String) -> [MorseSymbol] {

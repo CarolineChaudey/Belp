@@ -37,9 +37,12 @@ class BlepTests: XCTestCase {
     func testTranslator() {
         let translator = Translator()
         do {
-            let res = try translator.translate(text: "sos")
+            var res = try translator.translate(text: "sos")
             print(morseAsString(morseCode: res))
             XCTAssertEqual(morseAsString(morseCode: res), "...|---|...")
+            res = try translator.translate(text: "Hello world")
+            print(morseAsString(morseCode: res))
+            XCTAssertEqual(morseAsString(morseCode: res), "....|.|.-..|.-..|--- .--|---|.-.|.-..|-..")
         } catch {
             XCTFail()
         }
