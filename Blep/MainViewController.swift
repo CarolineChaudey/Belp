@@ -10,6 +10,10 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBAction func configureHome(_ sender: UIButton){
+        let selectHomeVC = SelectHomeViewController()
+        self.navigationController?.pushViewController(selectHomeVC, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

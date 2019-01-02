@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		689B27EC21DD652800FDEC7F /* SelectHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B27EB21DD652800FDEC7F /* SelectHomeViewController.swift */; };
+		689B27F821DD660B00FDEC7F /* CharacteristicListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689B27F021DD660A00FDEC7F /* CharacteristicListViewController.xib */; };
+		689B27F921DD660B00FDEC7F /* CharacteristicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B27F121DD660A00FDEC7F /* CharacteristicListViewController.swift */; };
+		689B27FA21DD660B00FDEC7F /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B27F221DD660A00FDEC7F /* ServiceListViewController.swift */; };
+		689B27FB21DD660B00FDEC7F /* AccessoryBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B27F321DD660A00FDEC7F /* AccessoryBrowserViewController.swift */; };
+		689B27FC21DD660B00FDEC7F /* AccessoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689B27F421DD660B00FDEC7F /* AccessoryListViewController.xib */; };
+		689B27FD21DD660B00FDEC7F /* AccessoryBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689B27F521DD660B00FDEC7F /* AccessoryBrowserViewController.xib */; };
+		689B27FE21DD660B00FDEC7F /* AccessoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B27F621DD660B00FDEC7F /* AccessoryListViewController.swift */; };
+		689B27FF21DD660B00FDEC7F /* ServiceListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689B27F721DD660B00FDEC7F /* ServiceListViewController.xib */; };
+		689B280021DD6CF100FDEC7F /* SelectHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 689B27ED21DD655500FDEC7F /* SelectHomeViewController.xib */; };
+		689B280421DD76D600FDEC7F /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689B280321DD76D600FDEC7F /* HomeKit.framework */; };
 		82A07F5B21B2FCAB00467877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A07F5A21B2FCAB00467877 /* AppDelegate.swift */; };
 		82A07F5D21B2FCAB00467877 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A07F5C21B2FCAB00467877 /* ViewController.swift */; };
 		82A07F6221B2FCB000467877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82A07F6121B2FCB000467877 /* Assets.xcassets */; };
@@ -78,6 +89,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		689B27EB21DD652800FDEC7F /* SelectHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectHomeViewController.swift; sourceTree = "<group>"; };
+		689B27ED21DD655500FDEC7F /* SelectHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectHomeViewController.xib; sourceTree = "<group>"; };
+		689B27F021DD660A00FDEC7F /* CharacteristicListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacteristicListViewController.xib; sourceTree = "<group>"; };
+		689B27F121DD660A00FDEC7F /* CharacteristicListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacteristicListViewController.swift; sourceTree = "<group>"; };
+		689B27F221DD660A00FDEC7F /* ServiceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
+		689B27F321DD660A00FDEC7F /* AccessoryBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryBrowserViewController.swift; sourceTree = "<group>"; };
+		689B27F421DD660B00FDEC7F /* AccessoryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccessoryListViewController.xib; sourceTree = "<group>"; };
+		689B27F521DD660B00FDEC7F /* AccessoryBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccessoryBrowserViewController.xib; sourceTree = "<group>"; };
+		689B27F621DD660B00FDEC7F /* AccessoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryListViewController.swift; sourceTree = "<group>"; };
+		689B27F721DD660B00FDEC7F /* ServiceListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceListViewController.xib; sourceTree = "<group>"; };
+		689B280121DD76D600FDEC7F /* Blep.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blep.entitlements; sourceTree = "<group>"; };
+		689B280321DD76D600FDEC7F /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		82A07F5721B2FCAB00467877 /* Blep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A07F5A21B2FCAB00467877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82A07F5C21B2FCAB00467877 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689B280421DD76D600FDEC7F /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +155,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		689B27EF21DD656100FDEC7F /* smart_object */ = {
+			isa = PBXGroup;
+			children = (
+				689B27EB21DD652800FDEC7F /* SelectHomeViewController.swift */,
+				689B27ED21DD655500FDEC7F /* SelectHomeViewController.xib */,
+				689B27F621DD660B00FDEC7F /* AccessoryListViewController.swift */,
+				689B27F421DD660B00FDEC7F /* AccessoryListViewController.xib */,
+				689B27F321DD660A00FDEC7F /* AccessoryBrowserViewController.swift */,
+				689B27F521DD660B00FDEC7F /* AccessoryBrowserViewController.xib */,
+				689B27F221DD660A00FDEC7F /* ServiceListViewController.swift */,
+				689B27F721DD660B00FDEC7F /* ServiceListViewController.xib */,
+				689B27F121DD660A00FDEC7F /* CharacteristicListViewController.swift */,
+				689B27F021DD660A00FDEC7F /* CharacteristicListViewController.xib */,
+			);
+			path = smart_object;
+			sourceTree = "<group>";
+		};
+		689B280221DD76D600FDEC7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				689B280321DD76D600FDEC7F /* HomeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		82A07F4E21B2FCAB00467877 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +188,7 @@
 				82A07F7C21B2FCB200467877 /* Blep WatchKit Extension */,
 				82DE204921BD5E840022245D /* BlepTests */,
 				82A07F5821B2FCAB00467877 /* Products */,
+				689B280221DD76D600FDEC7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +206,8 @@
 		82A07F5921B2FCAB00467877 /* Blep */ = {
 			isa = PBXGroup;
 			children = (
+				689B280121DD76D600FDEC7F /* Blep.entitlements */,
+				689B27EF21DD656100FDEC7F /* smart_object */,
 				82DE203D21BAC6EB0022245D /* translator */,
 				82A07F5A21B2FCAB00467877 /* AppDelegate.swift */,
 				82A07F5C21B2FCAB00467877 /* ViewController.swift */,
@@ -297,6 +349,11 @@
 				TargetAttributes = {
 					82A07F5621B2FCAB00467877 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
 					};
 					82A07F6821B2FCB000467877 = {
 						CreatedOnToolsVersion = 10.1;
@@ -336,7 +393,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689B27FD21DD660B00FDEC7F /* AccessoryBrowserViewController.xib in Resources */,
+				689B27FF21DD660B00FDEC7F /* ServiceListViewController.xib in Resources */,
 				82A07F6521B2FCB000467877 /* LaunchScreen.storyboard in Resources */,
+				689B27FC21DD660B00FDEC7F /* AccessoryListViewController.xib in Resources */,
+				689B27F821DD660B00FDEC7F /* CharacteristicListViewController.xib in Resources */,
+				689B280021DD6CF100FDEC7F /* SelectHomeViewController.xib in Resources */,
 				82A07F9721B30EEF00467877 /* MainViewController.xib in Resources */,
 				82A07F6221B2FCB000467877 /* Assets.xcassets in Resources */,
 			);
@@ -373,7 +435,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689B27FA21DD660B00FDEC7F /* ServiceListViewController.swift in Sources */,
+				689B27FE21DD660B00FDEC7F /* AccessoryListViewController.swift in Sources */,
 				82DE203C21BAB23A0022245D /* MorseSymbol.swift in Sources */,
+				689B27F921DD660B00FDEC7F /* CharacteristicListViewController.swift in Sources */,
+				689B27FB21DD660B00FDEC7F /* AccessoryBrowserViewController.swift in Sources */,
+				689B27EC21DD652800FDEC7F /* SelectHomeViewController.swift in Sources */,
 				82DE203F21BD534D0022245D /* Translator.swift in Sources */,
 				82A07F9621B30EEF00467877 /* MainViewController.swift in Sources */,
 				82A07F5D21B2FCAB00467877 /* ViewController.swift in Sources */,
@@ -562,6 +629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VES49Q9L83;
 				INFOPLIST_FILE = "Blep WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -574,7 +642,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Debug;
 		};
@@ -583,6 +651,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VES49Q9L83;
 				INFOPLIST_FILE = "Blep WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -595,7 +664,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};
@@ -605,6 +674,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VES49Q9L83;
 				IBSC_MODULE = Blep_WatchKit_Extension;
 				INFOPLIST_FILE = "Blep WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = esgi.moc.Blep.watchkitapp;
@@ -613,7 +683,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Debug;
 		};
@@ -623,6 +693,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VES49Q9L83;
 				IBSC_MODULE = Blep_WatchKit_Extension;
 				INFOPLIST_FILE = "Blep WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = esgi.moc.Blep.watchkitapp;
@@ -631,7 +702,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};
@@ -639,7 +710,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Blep/Blep.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VES49Q9L83;
 				INFOPLIST_FILE = Blep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -656,7 +729,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Blep/Blep.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VES49Q9L83;
 				INFOPLIST_FILE = Blep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -674,6 +749,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VES49Q9L83;
 				INFOPLIST_FILE = BlepTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -693,6 +769,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VES49Q9L83;
 				INFOPLIST_FILE = BlepTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
