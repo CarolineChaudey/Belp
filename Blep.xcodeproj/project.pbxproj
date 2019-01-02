@@ -21,6 +21,11 @@
 		82A07F8421B2FCB300467877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82A07F8321B2FCB300467877 /* Assets.xcassets */; };
 		82A07F9621B30EEF00467877 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A07F9421B30EEF00467877 /* MainViewController.swift */; };
 		82A07F9721B30EEF00467877 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A07F9521B30EEF00467877 /* MainViewController.xib */; };
+		82DE203A21BAAFFC0022245D /* MorseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE203921BAAFFC0022245D /* MorseCode.swift */; };
+		82DE203C21BAB23A0022245D /* MorseSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE203B21BAB23A0022245D /* MorseSymbol.swift */; };
+		82DE203F21BD534D0022245D /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE203E21BD534D0022245D /* Translator.swift */; };
+		82DE204121BD5A4B0022245D /* TranslationException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE204021BD5A4B0022245D /* TranslationException.swift */; };
+		82DE204B21BD5E840022245D /* BlepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE204A21BD5E840022245D /* BlepTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 82A07F7721B2FCB200467877;
 			remoteInfo = "Blep WatchKit Extension";
+		};
+		82DE204D21BD5E840022245D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82A07F4F21B2FCAB00467877 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82A07F5621B2FCAB00467877;
+			remoteInfo = Blep;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -85,6 +97,13 @@
 		82A07F8621B2FCB300467877 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		82A07F9421B30EEF00467877 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		82A07F9521B30EEF00467877 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		82DE203921BAAFFC0022245D /* MorseCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseCode.swift; sourceTree = "<group>"; };
+		82DE203B21BAB23A0022245D /* MorseSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseSymbol.swift; sourceTree = "<group>"; };
+		82DE203E21BD534D0022245D /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
+		82DE204021BD5A4B0022245D /* TranslationException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationException.swift; sourceTree = "<group>"; };
+		82DE204821BD5E840022245D /* BlepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82DE204A21BD5E840022245D /* BlepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlepTests.swift; sourceTree = "<group>"; };
+		82DE204C21BD5E840022245D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +121,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82DE204521BD5E840022245D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -111,6 +137,7 @@
 				82A07F5921B2FCAB00467877 /* Blep */,
 				82A07F6D21B2FCB000467877 /* Blep WatchKit App */,
 				82A07F7C21B2FCB200467877 /* Blep WatchKit Extension */,
+				82DE204921BD5E840022245D /* BlepTests */,
 				82A07F5821B2FCAB00467877 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +148,7 @@
 				82A07F5721B2FCAB00467877 /* Blep.app */,
 				82A07F6921B2FCB000467877 /* Blep WatchKit App.app */,
 				82A07F7821B2FCB200467877 /* Blep WatchKit Extension.appex */,
+				82DE204821BD5E840022245D /* BlepTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +156,7 @@
 		82A07F5921B2FCAB00467877 /* Blep */ = {
 			isa = PBXGroup;
 			children = (
+				82DE203D21BAC6EB0022245D /* translator */,
 				82A07F5A21B2FCAB00467877 /* AppDelegate.swift */,
 				82A07F5C21B2FCAB00467877 /* ViewController.swift */,
 				82A07F6121B2FCB000467877 /* Assets.xcassets */,
@@ -160,6 +189,26 @@
 				82A07F8621B2FCB300467877 /* PushNotificationPayload.apns */,
 			);
 			path = "Blep WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		82DE203D21BAC6EB0022245D /* translator */ = {
+			isa = PBXGroup;
+			children = (
+				82DE203921BAAFFC0022245D /* MorseCode.swift */,
+				82DE203B21BAB23A0022245D /* MorseSymbol.swift */,
+				82DE203E21BD534D0022245D /* Translator.swift */,
+				82DE204021BD5A4B0022245D /* TranslationException.swift */,
+			);
+			path = translator;
+			sourceTree = "<group>";
+		};
+		82DE204921BD5E840022245D /* BlepTests */ = {
+			isa = PBXGroup;
+			children = (
+				82DE204A21BD5E840022245D /* BlepTests.swift */,
+				82DE204C21BD5E840022245D /* Info.plist */,
+			);
+			path = BlepTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +267,24 @@
 			productReference = 82A07F7821B2FCB200467877 /* Blep WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		82DE204721BD5E840022245D /* BlepTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82DE204F21BD5E840022245D /* Build configuration list for PBXNativeTarget "BlepTests" */;
+			buildPhases = (
+				82DE204421BD5E840022245D /* Sources */,
+				82DE204521BD5E840022245D /* Frameworks */,
+				82DE204621BD5E840022245D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82DE204E21BD5E840022245D /* PBXTargetDependency */,
+			);
+			name = BlepTests;
+			productName = BlepTests;
+			productReference = 82DE204821BD5E840022245D /* BlepTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,6 +304,10 @@
 					82A07F7721B2FCB200467877 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					82DE204721BD5E840022245D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 82A07F5621B2FCAB00467877;
+					};
 				};
 			};
 			buildConfigurationList = 82A07F5221B2FCAB00467877 /* Build configuration list for PBXProject "Blep" */;
@@ -255,6 +326,7 @@
 				82A07F5621B2FCAB00467877 /* Blep */,
 				82A07F6821B2FCB000467877 /* Blep WatchKit App */,
 				82A07F7721B2FCB200467877 /* Blep WatchKit Extension */,
+				82DE204721BD5E840022245D /* BlepTests */,
 			);
 		};
 /* End PBXProject section */
@@ -287,6 +359,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82DE204621BD5E840022245D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -294,9 +373,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DE203C21BAB23A0022245D /* MorseSymbol.swift in Sources */,
+				82DE203F21BD534D0022245D /* Translator.swift in Sources */,
 				82A07F9621B30EEF00467877 /* MainViewController.swift in Sources */,
 				82A07F5D21B2FCAB00467877 /* ViewController.swift in Sources */,
 				82A07F5B21B2FCAB00467877 /* AppDelegate.swift in Sources */,
+				82DE204121BD5A4B0022245D /* TranslationException.swift in Sources */,
+				82DE203A21BAAFFC0022245D /* MorseCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +390,14 @@
 				82A07F8221B2FCB200467877 /* NotificationController.swift in Sources */,
 				82A07F8021B2FCB200467877 /* ExtensionDelegate.swift in Sources */,
 				82A07F7E21B2FCB200467877 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82DE204421BD5E840022245D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82DE204B21BD5E840022245D /* BlepTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +413,11 @@
 			isa = PBXTargetDependency;
 			target = 82A07F7721B2FCB200467877 /* Blep WatchKit Extension */;
 			targetProxy = 82A07F7A21B2FCB200467877 /* PBXContainerItemProxy */;
+		};
+		82DE204E21BD5E840022245D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82A07F5621B2FCAB00467877 /* Blep */;
+			targetProxy = 82DE204D21BD5E840022245D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -573,6 +669,44 @@
 			};
 			name = Release;
 		};
+		82DE205021BD5E840022245D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlepTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = esgi.moc.BlepTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blep.app/Blep";
+			};
+			name = Debug;
+		};
+		82DE205121BD5E840022245D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlepTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = esgi.moc.BlepTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blep.app/Blep";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -608,6 +742,15 @@
 			buildConfigurations = (
 				82A07F9221B2FCB300467877 /* Debug */,
 				82A07F9321B2FCB300467877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82DE204F21BD5E840022245D /* Build configuration list for PBXNativeTarget "BlepTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82DE205021BD5E840022245D /* Debug */,
+				82DE205121BD5E840022245D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
