@@ -14,7 +14,12 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Blep_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="1" height="0.69999999999999996" alignment="left" text="Label" id="Drd-Ij-Cck"/>
+                        <group width="1" height="0.69999999999999996" alignment="left" id="0ll-Pl-YYr">
+                            <items>
+                                <label width="0.69999999999999996" height="1" alignment="left" text="Label" id="Drd-Ij-Cck"/>
+                                <button width="0.29999999999999999" height="1" alignment="left" title="►" id="mgV-Lt-GG1"/>
+                            </items>
+                        </group>
                         <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" id="VEQ-Db-CrI">
                             <items>
                                 <button width="0.5" height="1" alignment="left" verticalAlignment="bottom" title="." id="Cb6-n2-6dY"/>
