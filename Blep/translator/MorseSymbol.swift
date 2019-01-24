@@ -24,6 +24,15 @@ func morseAsString(morseCode: [MorseSymbol]) -> String {
     return strCode
 }
 
+func light(symbol: MorseSymbol) -> Bool {
+    switch symbol {
+    case .dash, .dot:
+        return true
+    case .letterSeparator, .wordSeparator, .partSeparator:
+        return false
+    }
+}
+
 func duration(symbol: MorseSymbol) -> Int {
     switch symbol {
     case .partSeparator, .dot:

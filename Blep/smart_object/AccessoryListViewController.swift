@@ -38,7 +38,7 @@ extension AccessoryListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         mainView?.device = self.selectedHome.accessories[indexPath.row]
-        mainView?.refreshDeviceDisplay()
+        mainView?.refreshDevice()
         self.navigationController?.popToRootViewController(animated: false)
     }
 
