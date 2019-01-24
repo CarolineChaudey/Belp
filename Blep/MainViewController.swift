@@ -36,7 +36,17 @@ class MainViewController: UIViewController {
     // just to verify
     func refreshDeviceDisplay() {
         if device != nil {
-            deviceDisplay.text = device?.name
+            let services = device?.services
+            let characts = services![1].characteristics
+            characts.forEach { charac in
+                if charac.characteristicType == HMCharacteristicTypeBrightness {
+                    deviceDisplay.text = "brightness"
+                    // brightness to 80%
+                    charac.writeValue(80, completionHandler: { (err) in
+                        print(err)
+                    })
+                }
+            }
         }
     }
 
