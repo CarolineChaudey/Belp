@@ -7,10 +7,19 @@
 //
 
 import WatchKit
+import WatchConnectivity
 import Foundation
 import UIKit
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        
+    }
+    
 
     @IBOutlet var myLabel: WKInterfaceLabel!
     @IBAction func dotButton() {
@@ -18,11 +27,24 @@ class InterfaceController: WKInterfaceController {
     @IBAction func dashButton() {
     }
     @IBAction func sendButton() {
+        if WCSession.default.isReachable {
+            let messageDict = ["message": "hello iPhone!"]
+            
+            WCSession.default.sendMessage(messageDict, replyHandler: { (replyDict) -> Void in
+                print(replyDict)
+            }, errorHandler: { (error) -> Void in
+                print(error)
+            })
+        }
     }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
         // Configure interface objects here.
     }
     
