@@ -12,7 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Blep" customModuleProvider="target">
             <connections>
-                <outlet property="deviceDisplay" destination="BT3-9F-iU3" id="DKD-C4-KgW"/>
+                <outlet property="message" destination="K4H-co-NKh" id="H7y-zs-FCc"/>
+                <outlet property="testDisplay" destination="BT3-9F-iU3" id="DKD-C4-KgW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,11 +22,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ4-rz-sWg">
-                    <rect key="frame" x="158" y="266" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkH-5z-ZDc">
+                    <rect key="frame" x="116" y="318" width="142" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="configure your home"/>
                     <connections>
+                        <action selector="configureHome:" destination="-1" eventType="touchUpInside" id="tuu-Gh-wdK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ4-rz-sWg">
+                    <rect key="frame" x="50" y="150" width="275" height="30"/>
+                    <state key="normal" title="Convert to morse &amp; send"/>
+                    <connections>
+                        <action selector="convertMessage:" destination="-1" eventType="touchUpInside" id="Psz-lQ-5ua"/>
                         <action selector="vibrate:" destination="-1" eventType="touchUpInside" id="IkC-qz-DmJ"/>
                     </connections>
                 </button>
@@ -35,19 +44,23 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkH-5z-ZDc">
-                    <rect key="frame" x="116" y="318" width="142" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="configure your home"/>
-                    <connections>
-                        <action selector="configureHome:" destination="-1" eventType="touchUpInside" id="tuu-Gh-wdK"/>
-                    </connections>
-                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K4H-co-NKh">
+                    <rect key="frame" x="20" y="70" width="335" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vQ4-rz-sWg" secondAttribute="trailing" constant="50" id="2CV-MC-uEZ"/>
+                <constraint firstItem="vQ4-rz-sWg" firstAttribute="top" secondItem="K4H-co-NKh" secondAttribute="bottom" constant="50" id="O9I-vX-5Gt"/>
+                <constraint firstItem="K4H-co-NKh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Sl6-lB-iFh"/>
+                <constraint firstItem="K4H-co-NKh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="UO3-fF-JkO"/>
                 <constraint firstItem="BT3-9F-iU3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WjL-mm-o4Z"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BT3-9F-iU3" secondAttribute="bottom" constant="348" id="eck-xP-bat"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K4H-co-NKh" secondAttribute="trailing" constant="20" id="oBX-CN-XNj"/>
+                <constraint firstItem="vQ4-rz-sWg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="rNH-yc-0VG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BT3-9F-iU3" secondAttribute="trailing" id="vWt-bA-N2b"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

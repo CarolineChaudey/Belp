@@ -13,14 +13,30 @@ class MainViewController: UIViewController {
 
     var homeManager : HMHomeManager?
     var device : HMAccessory?
-    @IBOutlet weak var deviceDisplay: UILabel!
-    
+    @IBOutlet weak var testDisplay: UILabel!
+    @IBOutlet weak var message: UITextField!
+
+
     @IBAction func configureHome(_ sender: UIButton){
         let selectHomeVC = SelectHomeViewController()
         selectHomeVC.mainView = self
         self.navigationController?.pushViewController(selectHomeVC, animated: true)
     }
     
+    @IBAction func convertMessage(_ sender: Any) {
+        guard let msg = message.text else {
+            return
+        }
+        let translator = Translator()
+        do {
+            let code = try translator.translate(text: msg)
+            testDisplay.text = morseAsString(morseCode: code)
+        } catch {
+            return
+        }
+    }
+
+
     @IBAction func vibrate(_ sender: UIButton) {
         //WKInterfaceDevice.currentDevice().playHaptic(.Click)
     }
@@ -40,7 +56,7 @@ class MainViewController: UIViewController {
             let characts = services![1].characteristics
             characts.forEach { charac in
                 if charac.characteristicType == HMCharacteristicTypeBrightness {
-                    deviceDisplay.text = "brightness"
+                    testDisplay.text = "brightness"
                     // brightness to 80%
                     charac.writeValue(80, completionHandler: { (err) in
                         print(err)
