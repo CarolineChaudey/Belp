@@ -17,16 +17,31 @@
                         <group width="1" height="0.69999999999999996" alignment="left" id="0ll-Pl-YYr">
                             <items>
                                 <label width="0.69999999999999996" height="1" alignment="left" text="Label" id="Drd-Ij-Cck"/>
-                                <button width="0.29999999999999999" height="1" alignment="left" title="►" id="mgV-Lt-GG1"/>
+                                <button width="0.29999999999999999" height="1" alignment="left" title="►" id="mgV-Lt-GG1">
+                                    <connections>
+                                        <action selector="sendButton" destination="AgC-eL-Hgc" id="8Od-f1-GFl"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                         <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" id="VEQ-Db-CrI">
                             <items>
-                                <button width="0.5" height="1" alignment="left" verticalAlignment="bottom" title="." id="Cb6-n2-6dY"/>
-                                <button width="0.5" height="1" alignment="left" verticalAlignment="bottom" title="-" id="L1K-RI-AUj"/>
+                                <button width="0.5" height="1" alignment="left" verticalAlignment="bottom" title="." id="Cb6-n2-6dY">
+                                    <connections>
+                                        <action selector="dotButton" destination="AgC-eL-Hgc" id="fD9-Sn-DSd"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="left" verticalAlignment="bottom" title="-" id="L1K-RI-AUj">
+                                    <connections>
+                                        <action selector="dashButton" destination="AgC-eL-Hgc" id="pBC-P1-LGf"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="myLabel" destination="Drd-Ij-Cck" id="eQZ-aZ-1th"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="385"/>

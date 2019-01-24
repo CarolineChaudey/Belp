@@ -12,6 +12,13 @@ import UIKit
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var myLabel: WKInterfaceLabel!
+    @IBAction func dotButton() {
+    }
+    @IBAction func dashButton() {
+    }
+    @IBAction func sendButton() {
+    }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
