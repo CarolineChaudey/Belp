@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
     // just to verify
     func refreshDeviceDisplay() {
         if device != nil {
-            deviceDisplay.text = device?.category.categoryType
+            deviceDisplay.text = device?.name
         }
     }
 
