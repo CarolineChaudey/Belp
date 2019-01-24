@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import HomeKit
 
 class MainViewController: UIViewController {
 
+    var homeManager : HMHomeManager?
+    var device : HMAccessory?
+    @IBOutlet weak var deviceDisplay: UILabel!
+    
     @IBAction func configureHome(_ sender: UIButton){
         let selectHomeVC = SelectHomeViewController()
+        selectHomeVC.mainView = self
         self.navigationController?.pushViewController(selectHomeVC, animated: true)
     }
     
@@ -22,17 +28,20 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let homeManager = HMHomeManager()
+        homeManager.delegate = self
+        self.homeManager = homeManager
+    }
+    
+    // just to verify
+    func refreshDeviceDisplay() {
+        if device != nil {
+            deviceDisplay.text = device?.category.categoryType
+        }
     }
 
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension MainViewController : HMHomeManagerDelegate {
+    
 }

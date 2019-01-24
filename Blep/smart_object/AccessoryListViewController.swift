@@ -12,6 +12,7 @@ class AccessoryListViewController: UIViewController {
     
     @IBOutlet var accessoryTableView: UITableView!
     var selectedHome: HMHome!
+    var mainView : MainViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +37,11 @@ class AccessoryListViewController: UIViewController {
 extension AccessoryListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let serviceListController = ServiceListViewController()
-        serviceListController.selectedAccessory = self.selectedHome.accessories[indexPath.row]
-        self.navigationController?.pushViewController(serviceListController, animated: true)
+        mainView?.device = self.selectedHome.accessories[indexPath.row]
+        mainView?.refreshDeviceDisplay()
+        self.navigationController?.popToRootViewController(animated: false)
     }
-    
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let acc = self.selectedHome.accessories[indexPath.row]

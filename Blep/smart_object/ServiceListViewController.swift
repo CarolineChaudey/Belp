@@ -16,12 +16,12 @@ class ServiceListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = selectedAccessory.name
-        self.serviceTableView.delegate = self
+        // self.serviceTableView.delegate = self
         self.serviceTableView.dataSource = self
     }
 }
 
-extension ServiceListViewController: UITableViewDelegate {
+/* extension ServiceListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let characteristicViewController = CharacteristicListViewController()
@@ -29,7 +29,7 @@ extension ServiceListViewController: UITableViewDelegate {
         self.navigationController?.pushViewController(characteristicViewController, animated: true)
     }
     
-}
+} */
 
 extension ServiceListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -12,6 +12,7 @@ class SelectHomeViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     let homeManager = HMHomeManager()
+    var mainView : MainViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,7 @@ extension SelectHomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let accessoryListViewController = AccessoryListViewController()
         accessoryListViewController.selectedHome = self.homeManager.homes[indexPath.row]
+        accessoryListViewController.mainView = self.mainView
         self.navigationController?.pushViewController(accessoryListViewController, animated: true)
     }
 }

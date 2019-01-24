@@ -18,7 +18,7 @@ class AccessoryBrowserViewController: UIViewController {
             self.accessoryTableView.reloadData()
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Searching ..."
