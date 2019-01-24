@@ -1,9 +1,8 @@
 //
 //  SelectHomeViewController.swift
-//  MyHomeApp
+//  Blep
 //
-//  Created by Benoit BRIATTE on 25/10/2018.
-//  Copyright © 2018 Digipolitan. All rights reserved.
+//  Created by Herve on 25/10/2018.
 //
 
 import UIKit

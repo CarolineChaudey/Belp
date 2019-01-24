@@ -14,6 +14,10 @@ class MainViewController: UIViewController {
         let selectHomeVC = SelectHomeViewController()
         self.navigationController?.pushViewController(selectHomeVC, animated: true)
     }
+    
+    @IBAction func vibrate(_ sender: UIButton) {
+        //WKInterfaceDevice.currentDevice().playHaptic(.Click)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

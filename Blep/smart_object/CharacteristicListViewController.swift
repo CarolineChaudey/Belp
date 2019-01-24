@@ -1,10 +1,9 @@
 
 //
 //  CharacteristicListViewController.swift
-//  MyHomeApp
+//  Blep
 //
-//  Created by TantePata on 15/11/2018.
-//  Copyright © 2018 Digipolitan. All rights reserved.
+//  Created by Herve on 25/10/2018.
 //
 
 import UIKit
