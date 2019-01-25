@@ -38,7 +38,8 @@ extension AccessoryListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         mainView?.device = self.selectedHome.accessories[indexPath.row]
-        mainView?.refreshDevice()
+        mainView?.hometest = selectedHome
+        mainView?.changeBrightness()
         self.navigationController?.popToRootViewController(animated: false)
     }
 

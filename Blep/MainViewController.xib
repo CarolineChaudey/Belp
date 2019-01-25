@@ -12,8 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Blep" customModuleProvider="target">
             <connections>
+                <outlet property="deviceDisplay" destination="BT3-9F-iU3" id="tM6-mu-YO3"/>
                 <outlet property="message" destination="K4H-co-NKh" id="H7y-zs-FCc"/>
-                <outlet property="testDisplay" destination="BT3-9F-iU3" id="DKD-C4-KgW"/>
+                <outlet property="morseDisplay" destination="bE7-nC-pzD" id="6ao-Kg-xNt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,46 +23,56 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkH-5z-ZDc">
-                    <rect key="frame" x="116" y="318" width="142" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkH-5z-ZDc">
+                    <rect key="frame" x="50" y="344" width="275" height="30"/>
                     <state key="normal" title="configure your home"/>
                     <connections>
                         <action selector="configureHome:" destination="-1" eventType="touchUpInside" id="tuu-Gh-wdK"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ4-rz-sWg">
-                    <rect key="frame" x="50" y="150" width="275" height="30"/>
+                    <rect key="frame" x="50" y="176" width="275" height="30"/>
                     <state key="normal" title="Convert to morse &amp; send"/>
                     <connections>
-                        <action selector="convertMessage:" destination="-1" eventType="touchUpInside" id="Psz-lQ-5ua"/>
-                        <action selector="vibrate:" destination="-1" eventType="touchUpInside" id="IkC-qz-DmJ"/>
+                        <action selector="convertMessage:" destination="-1" eventType="touchUpInside" id="Nx8-km-v71"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT3-9F-iU3">
-                    <rect key="frame" x="0.0" y="298" width="375" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K4H-co-NKh">
                     <rect key="frame" x="20" y="70" width="335" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT3-9F-iU3" userLabel="Device display">
+                    <rect key="frame" x="0.0" y="405" width="375" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE7-nC-pzD">
+                    <rect key="frame" x="20" y="130" width="335" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vQ4-rz-sWg" secondAttribute="trailing" constant="50" id="2CV-MC-uEZ"/>
-                <constraint firstItem="vQ4-rz-sWg" firstAttribute="top" secondItem="K4H-co-NKh" secondAttribute="bottom" constant="50" id="O9I-vX-5Gt"/>
-                <constraint firstItem="K4H-co-NKh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Sl6-lB-iFh"/>
-                <constraint firstItem="K4H-co-NKh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="UO3-fF-JkO"/>
-                <constraint firstItem="BT3-9F-iU3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WjL-mm-o4Z"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BT3-9F-iU3" secondAttribute="bottom" constant="348" id="eck-xP-bat"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K4H-co-NKh" secondAttribute="trailing" constant="20" id="oBX-CN-XNj"/>
-                <constraint firstItem="vQ4-rz-sWg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="rNH-yc-0VG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BT3-9F-iU3" secondAttribute="trailing" id="vWt-bA-N2b"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bE7-nC-pzD" secondAttribute="trailing" constant="20" id="0R0-qG-yqA"/>
+                <constraint firstItem="BT3-9F-iU3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="11g-sZ-wsR"/>
+                <constraint firstItem="bE7-nC-pzD" firstAttribute="top" secondItem="K4H-co-NKh" secondAttribute="bottom" constant="30" id="4mJ-Xb-gbU"/>
+                <constraint firstItem="bE7-nC-pzD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="71c-EE-H1A"/>
+                <constraint firstItem="BT3-9F-iU3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7wL-Bp-yOD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K4H-co-NKh" secondAttribute="trailing" constant="20" id="8WQ-Ww-6Wx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YkH-5z-ZDc" secondAttribute="trailing" constant="50" id="ABV-w1-GVu"/>
+                <constraint firstItem="BT3-9F-iU3" firstAttribute="top" secondItem="YkH-5z-ZDc" secondAttribute="bottom" constant="31" id="GCC-2B-eCS"/>
+                <constraint firstItem="YkH-5z-ZDc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="OWN-7E-KEW"/>
+                <constraint firstItem="K4H-co-NKh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="V5U-DN-Brl"/>
+                <constraint firstItem="YkH-5z-ZDc" firstAttribute="top" secondItem="vQ4-rz-sWg" secondAttribute="bottom" constant="138" id="bT2-46-52Y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vQ4-rz-sWg" secondAttribute="trailing" constant="50" id="hq3-IO-mVa"/>
+                <constraint firstItem="K4H-co-NKh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="mhC-cs-lSm"/>
+                <constraint firstItem="vQ4-rz-sWg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="o5x-LQ-Ban"/>
+                <constraint firstItem="vQ4-rz-sWg" firstAttribute="top" secondItem="bE7-nC-pzD" secondAttribute="bottom" constant="25" id="y8a-Zl-b5c"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="477.60000000000002" y="152.47376311844079"/>
